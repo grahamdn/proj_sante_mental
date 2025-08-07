@@ -4,12 +4,14 @@ require("dotenv").config();
 require("./config/db");
 
 const authRoutes = require("./routes/auth.routes");
+const forumRoutes = require("./routes/forum.routes")
 
 const server = express();
 server.use(cors());
 server.use(express.json());
 
 server.use("/auth/", authRoutes);
+server.use("/forum/", forumRoutes);
 
 server.get("/", (req, res) => {
     console.log('OK')
