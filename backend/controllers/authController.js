@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 
-const JWT_SECRET = process.env.JWT_SECRET || "test"; // À stocker dans les variables d'environnement
+const JWT_SECRET = process.env.JWT_SECRET; // À stocker dans les variables d'environnement
 
 exports.register = async (req, res) => {
     try {
